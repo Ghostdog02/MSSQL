@@ -1,0 +1,1 @@
+SELECT DISTINCT TOP(10) LastName FROM [SoftUni].[dbo].[Employees];
