@@ -41,5 +41,3 @@ Contains lecture notes, slides, and resources to support learning.
 * MS SQL Server and MS Access examples
 * Includes real-world scenarios and sample databases
 * Well-structured resources for learning and reference
-
-```
