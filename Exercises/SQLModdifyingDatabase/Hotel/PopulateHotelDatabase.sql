@@ -1,57 +1,74 @@
-﻿INSERT INTO Employees (FirstName, LastName, Title, Notes) VALUES 
-('Анна', 'Петрова', 'Управител', 'Отговаря за оперативната дейност'),
-('Иван', 'Георгиев', 'Рецепционист', 'Дневна смяна'),
-('Мария', 'Димитрова', 'Камериерка', 'Обслужва етаж 2'),
-('Георги', 'Колев', 'Готвач', 'Главен готвач'),
-('Елена', 'Николова', 'Рецепционист', 'Нощна смяна');
+﻿USE Hotel;
 GO
 
-INSERT INTO Customers (FirstName, LastName, PhoneNumber, EmergencyName, EmergencyNumber, Notes) VALUES
-('Петър', 'Стоянов', '+359888123456', 'Катя Стоянова', '+359888987654', 'Бизнес клиент, редовен'),
-('Силвия', 'Костова', '+447700900001', 'Джон Смит', '+447700900002', 'Турист от Великобритания'),
-('Александър', 'Великов', '+359899112233', 'Диана Великова', '+359899445566', 'Семейна почивка'),
-('Кристина', 'Иванова', '+491515556677', 'Мартин Иванов', '+491515558899', 'Отседнала за конференция'),
-('Димитър', 'Радев', '+359877000111', 'Гергана Радева', '+359877222333', 'Удължен престой');
+INSERT INTO Employees (FirstName, LastName, Title, Notes)
+VALUES 
+    ('John', 'Smith', 'Front Desk Manager', 'Senior staff member, 5 years experience'),
+    ('Sarah', 'Johnson', 'Receptionist', 'Part-time, weekend shifts'),
+    ('Michael', 'Brown', 'Concierge', 'Speaks English, Spanish, and French'),
+    ('Emily', 'Davis', 'Night Auditor', 'Works overnight shifts'),
+    ('David', 'Wilson', 'Guest Services', 'Handles VIP guests');
 GO
 
-INSERT INTO RoomStatus (RoomStatus, Notes) VALUES
-('Свободна', 'Чиста и готова за настаняване'),
-('Заета', 'В момента има настанени гости'),
-('Почистване', 'В процес на почистване'),
-('Ремонт', 'Временно неизползваема'),
-('Резервирана', 'Очаква се настаняване днес');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, EmergencyName, EmergencyNumber, Notes)
+VALUES 
+    ('Robert', 'Anderson', '+12025551234', 'Mary Anderson', '+12025555678', 'Frequent guest, prefers quiet rooms'),
+    ('Jennifer', 'Martinez', '+13105552345', 'Carlos Martinez', '+13105556789', 'Allergic to feather pillows'),
+    ('William', 'Taylor', '+14155553456', 'Linda Taylor', '+14155557890', 'Business traveler'),
+    ('Lisa', 'Thomas', '+17185554567', 'James Thomas', '+17185558901', 'Celebrating anniversary'),
+    ('James', 'Moore', '+13235555678', 'Patricia Moore', '+13235559012', 'Requires wheelchair accessible room');
 GO
 
-INSERT INTO RoomTypes (RoomType, Notes) VALUES
-('Единична', 'Стая с едно легло'),
-('Двойна', 'Стая с голямо (спалня) или две отделни легла'),
-('Апартамент', 'Две или повече стаи'),
-('Студио', 'Едно голямо помещение с кухненски бокс'),
-('Тройна', 'Стая с три легла');
+INSERT INTO RoomStatus (RoomStatus, Notes)
+VALUES 
+    ('Available', 'Room is clean and ready for guests'),
+    ('Occupied', 'Currently has a guest checked in'),
+    ('Cleaning', 'Room is being cleaned by housekeeping'),
+    ('Maintenance', 'Room requires repairs'),
+    ('Reserved', 'Room is booked for future arrival');
 GO
 
-INSERT INTO BedTypes (BedType, Notes) VALUES
-('Единично', 'Стандартно единично легло'),
-('Двойно (Queen)', 'Голямо легло (150-160 см ширина)'),
-('Спалня (King)', 'Много голямо легло (180-200 см ширина)'),
-('Разтегателен диван', 'Допълнително легло'),
-('Бебешко креватче', 'Преносимо креватче за бебе');
+INSERT INTO RoomTypes (RoomType, Notes)
+VALUES 
+    ('Standard', 'Basic room with standard amenities'),
+    ('Deluxe', 'Upgraded room with premium features'),
+    ('Suite', 'Large room with separate living area'),
+    ('Penthouse', 'Top floor luxury suite'),
+    ('Family', 'Room designed for families with children');
 GO
 
-INSERT INTO Rooms (RoomNumber, RoomTypeID, BedID, Rate, RoomStatusID, Notes) VALUES
-(101, 2, 2, 85.00, 2, 'Изглед към градината'), 
-(205, 3, 3, 140.00, 1, 'Апартамент, изглед към морето'),
-(310, 1, 1, 55.00, 3, 'В момента се почиства'),
-(102, 2, 2, 90.00, 5, 'С резервация'),
-(401, 4, 3, 110.00, 2, 'Студио с тераса'); 
+INSERT INTO BedTypes (BedType, Notes)
+VALUES 
+    ('Single', 'One twin bed'),
+    ('Double', 'Two twin beds'),
+    ('Queen', 'One queen-size bed'),
+    ('King', 'One king-size bed'),
+    ('Double Queen', 'Two queen-size beds');
 GO
 
-INSERT INTO Payments (EmployeeID, PaymentDate, CustomerID, FirstDateOccupied, LastDateOccupied, TotalDays, AmountCharged, TaxRate, TaxAmount, PaymentTotal, Notes) VALUES
-(2, '2025-10-25', 1, '2025-10-20', '2025-10-25', 5, 450.00, 0.09, 40.50, 490.50, 'Плащане в брой'),
-(5, '2025-10-26', 2, '2025-10-22', '2025-10-26', 4, 560.00, 0.09, 50.40, 610.40, 'Плащане с карта Visa');
+INSERT INTO Rooms (RoomNumber, RoomTypeID, BedID, RoomStatusID, Rate, Notes)
+VALUES 
+    (101, 1, 3, 1, 89.99, 'Ground floor, near elevator'),
+    (205, 2, 4, 2, 129.99, 'City view, second floor'),
+    (310, 3, 4, 1, 199.99, 'Corner suite with balcony'),
+    (501, 4, 4, 5, 399.99, 'Penthouse with panoramic views'),
+    (208, 5, 5, 1, 149.99, 'Family room with sofa bed');
 GO
 
-INSERT INTO Occupancies (EmployeeID, DateOccupied, CustomerID, RoomNumber, RateApplied, PhoneCharge, Notes) VALUES
-(2, '2025-10-20', 1, 101, 90.00, 5.50, 'Настаняване на Петър Стоянов'),
-(5, '2025-10-22', 2, 205, 140.00, 0.00, 'Настаняване на Силвия Костова');
+INSERT INTO Payments (EmployeeID, PaymentDate, CustomerID, FirstDateOccupied, LastDateOccupied, TotalDays, AmountCharged, TaxRate, TaxAmount, PaymentTotal, Notes)
+VALUES 
+    (1, '2024-10-15', 1, '2024-10-15', '2024-10-17', 2, 259.98, 0.0850, 22.10, 282.08, 'Paid by credit card'),
+    (2, '2024-10-20', 2, '2024-10-20', '2024-10-22', 2, 179.98, 0.0850, 15.30, 195.28, 'Paid in cash'),
+    (1, '2024-10-25', 3, '2024-10-25', '2024-10-30', 5, 649.95, 0.0850, 55.25, 705.20, 'Corporate booking'),
+    (3, '2024-10-28', 4, '2024-10-28', '2024-10-29', 1, 199.99, 0.0850, 17.00, 216.99, 'Anniversary special'),
+    (1, '2024-11-01', 5, '2024-11-01', '2024-11-03', 2, 299.98, 0.0850, 25.50, 325.48, 'Accessible room booking');
+GO
+
+INSERT INTO Occupancies (EmployeeID, DateOccupied, CustomerID, RoomNumber, RateApplied, PhoneCharge)
+VALUES 
+    (1, '2024-10-15', 1, 205, 129.99, 5.50),
+    (2, '2024-10-20', 2, 101, 89.99, 0.00),
+    (1, '2024-10-25', 3, 310, 129.99, 12.75),
+    (3, '2024-10-28', 4, 310, 199.99, 3.25),
+    (1, '2024-11-01', 5, 208, 149.99, 0.00);
 GO

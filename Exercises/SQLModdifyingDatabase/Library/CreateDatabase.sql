@@ -1,0 +1,22 @@
+CREATE DATABASE Library;
+GO
+
+USE Library;
+GO
+
+CREATE TABLE Authors (
+    AuthorID INT PRIMARY KEY IDENTITY(1, 1),
+    FirstName NVARCHAR(50) NOT NULL,
+    LastName NVARCHAR(50) NOT NULL,
+    BirthDate DATE NOT NULL,
+);
+
+CREATE TABLE Books (
+    BookID INT PRIMARY KEY IDENTITY(1, 1),
+    Title NVARCHAR(30) NOT NULL,
+    PublicationYear SMALLINT NOT NULL,
+    AuthorID INT NOT NULL,
+    CONSTRAINT FK_Books_Authors 
+    FOREIGN KEY (AuthorID) REFERENCES Authors(AuthorID) 
+    ON UPDATE CASCADE ON DELETE CASCADE
+);
