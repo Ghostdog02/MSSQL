@@ -4,7 +4,6 @@ VALUES
     ('Aleko', 'Konstantinov', '1863-01-01'),
     ('Elin', 'Pelin', '1877-07-08'),
     ('Peyo', 'Yavorov', '1878-01-13');
-GO
 
 INSERT INTO Books (Title, PublicationYear, AuthorID)
 VALUES
