@@ -1,43 +1,87 @@
-# MS SQL Learning Repository
+# 🎓 Database Module - Skills & Knowledge Summary
 
 A comprehensive collection of **MS SQL and database exercises, theory materials, and resources**. This repository is designed for learning, practicing, and referencing SQL Server, MS Access, and database concepts.
 
-## 💾 Repository Structure
+## 📊 Core Database Concepts
 
-### 1. Exercises
+- Understanding information systems architecture
+- Database Management Systems (DBMS) principles
+- Introduction to MS SQL Server platform
+- Database design best practices
+- Data integrity and consistency
 
-Contains hands-on SQL exercises for learning and practicing queries.
+---
 
-* **IntroToSQL**
+## 💻 SQL Programming Skills
 
-  * Basic SQL queries and exercises (`SelectDistinctLastNames.sql`, `SelectEmployeesByDepartmentId.sql`, etc.)
-* **IntroToSQLServer**
+### Fundamentals
+- SQL syntax and query structure
+- SELECT statements with filtering (WHERE)
+- Sorting and limiting results (ORDER BY, TOP)
+- Working with DISTINCT values
 
-  * SQL Server exercises, including **Minions**, **TravelCompany**, and **School** databases.
-* **SQLModifyingDatabase**
+### Data Manipulation
+- INSERT - Adding new records
+- UPDATE - Modifying existing data
+- DELETE - Removing records safely
+- Transaction management basics
 
-  * Exercises on `INSERT`, `UPDATE`, `DELETE` statements.
-  * Includes example databases like **Hotel** and **Minions**.
+### Advanced Queries
+- INNER, LEFT, RIGHT, and FULL JOINs
+- Complex multi-table joins
+- Subqueries and nested SELECT statements
+- Correlated subqueries
 
-### 2. Theory
+### Data Analysis
+- Aggregate functions (SUM, COUNT, AVG, MIN, MAX)
+- GROUP BY for data grouping
+- HAVING clause for filtered aggregations
+- Statistical data analysis
 
-Contains lecture notes, slides, and resources to support learning.
+---
 
-* **01-IT-Systems → 16-Final-Quiz**
+## 🏗️ Database Design & Modeling
 
-  * Covers topics from IT systems to advanced SQL joins, ER modeling, and exams.
-  * Includes `.docx` exercises, `.pptx` slides, and reference `.sql` files.
-* **Resources**
+- Entity-Relationship (E/R) diagrams
+- Identifying entities, attributes, and relationships
+- One-to-many, many-to-many relationships
+- Database normalization (1NF, 2NF, 3NF)
+- Primary and foreign keys
+- Referential integrity constraints
 
-  * Databases, lab exercises, sample exams, and project ideas (`.zip`, `.sql`, `.pptx`, `.docx`).
+---
 
-### 3. Other Files
+## 🚀 Practical Experience
 
-* **Obsidian config** (optional, not part of exercises)
+- Real-world database projects
+- Problem-solving with SQL
+- Database optimization techniques
+- Testing and debugging queries
+- Best practices for production databases
 
-## ⚡ Features
+---
 
-* Practical SQL exercises for **beginners to advanced users**
-* MS SQL Server and MS Access examples
-* Includes real-world scenarios and sample databases
-* Well-structured resources for learning and reference
+## 📈 Course Statistics
+
+| Component | Hours |
+|-----------|-------|
+| Theory | 32 |
+| Practice | 40 |
+| **Total** | **72** |
+
+---
+
+## ✅ Assessments Completed
+
+- ✓ SQL Fundamentals Test
+- ✓ Data Modeling & JOINs Test
+
+---
+
+> **Result**: Professional-level database skills ready for real-world application development! 💪
+
+---
+
+## 📚 Course Materials
+
+Theory is from: [https://github.com/Ghostdog02/School-Programming/tree/main/Courses/Software-Sciences/Module-3-Databases](https://github.com/Ghostdog02/School-Programming/tree/main/Courses/Software-Sciences/Module-3-Databases)
