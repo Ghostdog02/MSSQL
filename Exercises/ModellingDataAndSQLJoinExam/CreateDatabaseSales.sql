@@ -49,9 +49,18 @@ GO
 
 CREATE TABLE OrderItems (
     Id INT PRIMARY KEY IDENTITY(1, 1),
+    OrderId INT,
     ProductId INT,
     Quantity INT,
-    Subtotal DECIMAL(7, 2)
+    Subtotal DECIMAL(7, 2),
+
+    CONSTRAINT FK_OrderItems_Orders
+    FOREIGN KEY (OrderId) REFERENCES Orders(Id)
+    ON UPDATE CASCADE,
+
+    CONSTRAINT FK_OrderItems_Products
+    FOREIGN KEY (ProductId) REFERENCES Products(Id)
+    ON UPDATE CASCADE
 )
 GO
 

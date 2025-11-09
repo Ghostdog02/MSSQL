@@ -22,17 +22,23 @@ VALUES ('Headphones', 'High-quality over-ear headphones', 120, 25, 1);
 INSERT INTO Products ([Name], [Description], Price, StockQuantity, CategoryId)
 VALUES ('Smartwatch', 'Fitness and health monitoring smartwatch', 150, 20, 1);
 
-INSERT INTO OrderItems (ProductId, Quantity, Subtotal)
-VALUES (1, 5, 5 * 1500), 
-	   (2, 6, 800),
-	   (3, 3, 3 * 120),
-	   (4, 4, 4 * 150)
-
+-- 4. Поръчки (Трябва да са ПРЕДИ OrderItems)
+-- Приемаме, че тази поръчка получава автоматично Id = 1
 INSERT INTO Orders (UserId, OrderDate, TotalAmount, ShippingAddress)
-VALUES (1, '2023-01-05', 7500, 'First Street 5, Sofia');
+VALUES (1, '2023-01-05', 7500, 'First Street 5, Sofia'); 
 
+-- Приемаме, че тази поръчка получава автоматично Id = 2
 INSERT INTO Orders (UserId, OrderDate, TotalAmount, ShippingAddress)
-VALUES (2, '2023-02-10', 800, 'Second Street 10, Sofia');
+VALUES (2, '2023-02-10', 800, 'Second Street 10, Sofia'); 
+
+-- 5. Артикули от поръчките (СВЪРЗАНИ с OrderId)
+-- Артикул за Поръчка 1
+INSERT INTO OrderItems (OrderId, ProductId, Quantity, Subtotal)
+VALUES (1, 1, 5, 7500); -- Свързан с OrderId = 1
+
+-- Артикул за Поръчка 2 (Коригирано Quantity)
+INSERT INTO OrderItems (OrderId, ProductId, Quantity, Subtotal)
+VALUES (2, 2, 1, 800); -- Свързан с OrderId = 2
 
 INSERT INTO Reviews (ProductId, UserId, Rating, Comment)
 VALUES (1, 1, 5, 'Great laptop with fast performance.');
